@@ -16,4 +16,4 @@ Open a terminal and navigate to the directory containing the Dockerfile.
 docker build -t .hh
 
 # Run the Docker container
-docker run -it --rm -p 7775:3000 hh
+docker run -it -p 7775:3000 hh

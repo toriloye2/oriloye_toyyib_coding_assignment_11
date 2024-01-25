@@ -13,7 +13,7 @@ Open a terminal and navigate to the directory containing the Dockerfile.
 
 
 # Build the Docker image
-docker build -t .oriloye_toyyib_coding_assignment11
+docker build -t .hh
 
 # Run the Docker container
-docker run -it --rm -p 7775:3000 oriloye_toyyib_coding_assignment11
+docker run -it --rm -p 7775:3000 hh

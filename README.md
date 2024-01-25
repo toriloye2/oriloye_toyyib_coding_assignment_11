@@ -11,7 +11,7 @@ This is a web application created with Create React App. It can be run using Doc
 
 Open a terminal and navigate to the directory containing the Dockerfile.
 
-```bash
+
 # Build the Docker image
 docker build -t .oriloye_toyyib_coding_assignment11
 

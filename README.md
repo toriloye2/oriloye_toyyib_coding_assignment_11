@@ -1,6 +1,6 @@
 # Web Application
 
-This is a web application created with Create React App. It can be run using Docker. Follow the instructions below to get the web application running on `localhost:7775`.
+This is a web application created with Create React App. It can be run using Docker..
 
 ## Prerequisites
 

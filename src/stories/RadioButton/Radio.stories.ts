@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Radio } from './Radio'; // Import your Radio component here
+import  { Radio } from './Radio'; // Import your Radio component here
+import { RadioProps } from "./Radio.types";
+
 
 // Define the RadioProps type
 // export type RadioProps = {
@@ -25,42 +27,45 @@ const meta: Meta = {
   },
 };
 
-export default meta;
+
 
 // Define a StoryObj type for your component
 type Story = StoryObj<RadioProps>;
 
 // Define your stories
-export const Default: Story = (args) => <Radio {...args} />;
+export const Default: Story = (args: RadioProps) => <Radio {...} />;
+
+
 Default.args = {
   label: 'Option 1',
   value: 'option1',
 };
 
-export const Checked: Story = (args) => <Radio {...args} />;
+export const Checked: Story =  (args: RadioProps) => <Radio {...args}/>;
 Checked.args = {
   label: 'Option 2',
   value: 'option2',
   checked: true,
 };
 
-export const Disabled: Story = (args) => <Radio {...args} />;
+export const Disabled: Story =  (args: RadioProps) => <Radio {...args} />;
 Disabled.args = {
   label: 'Option 3',
   value: 'option3',
   disabled: true,
 };
 
-export const CustomColor: Story = (args) => <Radio {...args} />;
+export const CustomColor: Story = (args: RadioProps)=> <Radio  {...args} />;
 CustomColor.args = {
   label: 'Option 4',
   value: 'option4',
   color: 'blue',
 };
 
-export const CustomBackgroundColor: Story = (args) => <Radio {...args} />;
+export const CustomBackgroundColor: Story =  (args: RadioProps) => <Radio {...args} />;
 CustomBackgroundColor.args = {
   label: 'Option 5',
   value: 'option5',
   backgroundColor: 'lightgray',
 };
+export default meta;

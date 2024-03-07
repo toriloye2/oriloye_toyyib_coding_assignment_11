@@ -1,10 +1,6 @@
 # Web Application
 
-<<<<<<< Updated upstream
-This is a web application created with Create React App. It can be run using Docker..
-=======
 This is a web application created with Create React App. It can be run using Docker.
->>>>>>> Stashed changes
 
 ## Prerequisites
 

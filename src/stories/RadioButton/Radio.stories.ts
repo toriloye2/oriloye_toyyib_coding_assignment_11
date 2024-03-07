@@ -33,39 +33,40 @@ const meta: Meta = {
 type Story = StoryObj<RadioProps>;
 
 // Define your stories
-export const Default: Story = (args: RadioProps) => <Radio {...} />;
-
-
-Default.args = {
-  label: 'Option 1',
-  value: 'option1',
+export const Default: Story ={
+  args: {
+    label: 'Option 1',
+    value: 'option1',
+  }
 };
 
-export const Checked: Story =  (args: RadioProps) => <Radio {...args}/>;
-Checked.args = {
+export const Checked: Story = {
+args: {
   label: 'Option 2',
   value: 'option2',
   checked: true,
+}
 };
-
-export const Disabled: Story =  (args: RadioProps) => <Radio {...args} />;
-Disabled.args = {
+export const Disabled: Story = {
+args: {
   label: 'Option 3',
   value: 'option3',
   disabled: true,
+}
 };
-
-export const CustomColor: Story = (args: RadioProps)=> <Radio  {...args} />;
-CustomColor.args = {
+export const CustomColor: Story ={
+args :{
   label: 'Option 4',
   value: 'option4',
   color: 'blue',
+}
 };
 
-export const CustomBackgroundColor: Story =  (args: RadioProps) => <Radio {...args} />;
-CustomBackgroundColor.args = {
+export const CustomBackgroundColor: Story ={
+args: {
   label: 'Option 5',
   value: 'option5',
   backgroundColor: 'lightgray',
+}
 };
 export default meta;

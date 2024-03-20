@@ -3,5 +3,6 @@ export type TextProps = {
   disabled?: boolean;
   size?: 'small' | 'medium' | 'large';
   color?: string;
-  backgroundColor?: string;
+  preferredSizes?: string[];
+
 };

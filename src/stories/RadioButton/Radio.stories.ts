@@ -2,17 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import  { Radio } from './Radio'; // Import your Radio component here
 import { RadioProps } from "./Radio.types";
 
-
-// Define the RadioProps type
-// export type RadioProps = {
-//   label: string;
-//   value: string;
-//   checked?: boolean;
-//   disabled?: boolean;
-//   color?: string;
-//   backgroundColor?: string;
-// };
-
 // Meta information about the component
 const meta: Meta = {
   title: 'Example/Radio', // Title for your story
@@ -52,21 +41,6 @@ args: {
   label: 'Option 3',
   value: 'option3',
   disabled: true,
-}
-};
-export const CustomColor: Story ={
-args :{
-  label: 'Option 4',
-  value: 'option4',
-  color: 'blue',
-}
-};
-
-export const CustomBackgroundColor: Story ={
-args: {
-  label: 'Option 5',
-  value: 'option5',
-  backgroundColor: 'lightgray',
 }
 };
 export default meta;

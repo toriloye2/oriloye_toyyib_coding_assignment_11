@@ -1,56 +1,71 @@
-import React from 'react';
+// import React, { useState } from 'react';
 import styled from 'styled-components';
-import PropTypes from "prop-types";
+import { DropProps } from './Drop.types';
+import React, { useState } from 'react';
 
-type DropdownProps ={
-  backgroundColor: string;
-  fontColor: string;
-  borderColor: string;
-  disable: boolean;
-}
-
-const StyledDropdown = styled.select<{ backgroundColor: string, fontColor: string, borderColor: string, disable: boolean}>`
-  /* Add your Dropdown styles here */
-  background-color: ${(props) => props.backgroundColor}; /* Fixed: backgroundColor was not interpolated */
-  color: ${(props) => props.fontColor};
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  cursor: ${(props) => (props.disable ? 'not-allowed' : 'pointer')};
-  border: 2px solid ${(props) => props.borderColor};
+// Styled component for the dropdown container
+const DropdownContainer = styled.div`
+  position: relative;
 `;
 
-const StyledOption = styled.option<{ backgroundColor: string, fontColor: string, borderColor: string}>`
-  /* Add your Dropdown styles here */
-  background-color: ${(props) => props.backgroundColor}; /* Fixed: backgroundColor was not interpolated */
-  color: ${(props) => props.fontColor};
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
+// Styled component for the hamburger icon
+const HamburgerIcon = styled.span`
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  border: 2px solid ${(props) => props.borderColor};
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ backgroundColor, fontColor, borderColor, disable }) => {
+// Styled component for the dropdown options
+const DropdownOptions = styled.select<DropProps>`
+  /* Add your Dropdown options styles here */
+  /* For demonstration, just basic styles */
+  background-color: white;
+  border: 2px solid ${(props) => props.borderColor};
+  border-radius: 4px;
+  padding: 8px;
+  width: 150px;
+`;
+
+// Styled component for the individual option
+const Option = styled.option`
+  /* Add your Option styles here */
+`;
+
+// Icon for closed hamburger
+const ClosedHamburgerIcon = () => (
+  <HamburgerIcon>☰</HamburgerIcon>
+);
+
+// Icon for opened hamburger
+const OpenedHamburgerIcon = () => (
+  <HamburgerIcon>✖</HamburgerIcon>
+);
+
+// Component for the dropdown
+const Dropdown: React.FC<DropProps> = ({ borderColor }) => {
+  const [isOpen, setIsOpen] = useState(false); // State to track dropdown open/close
+
+  // Function to toggle dropdown state
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <StyledDropdown disable={disable} disabled = {disable} backgroundColor={backgroundColor} fontColor={fontColor} borderColor={borderColor}>
-      <StyledOption backgroundColor={backgroundColor} fontColor={fontColor} borderColor={borderColor}>
-        Option 1
-      </StyledOption>
-      <StyledOption backgroundColor={backgroundColor} fontColor={fontColor} borderColor={borderColor}>
-        Option 2
-      </StyledOption>
-      <StyledOption backgroundColor={backgroundColor} fontColor={fontColor} borderColor={borderColor}>
-        Option 3
-      </StyledOption>
-    </StyledDropdown>
+    <DropdownContainer>
+      {/* Conditional rendering based on dropdown state */}
+      {isOpen ? <OpenedHamburgerIcon onClick={toggleDropdown} /> : <ClosedHamburgerIcon onClick={toggleDropdown} />}
+      {isOpen && (
+        <DropdownOptions borderColor={borderColor}>
+          <Option>Option 1</Option>
+          <Option>Option 2</Option>
+          <Option>Option 3</Option>
+        </DropdownOptions>
+      )}
+    </DropdownContainer>
   );
 };
 
-Dropdown.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
-  fontColor: PropTypes.string.isRequired,
-};
-
 export default Dropdown;
+

@@ -4,6 +4,7 @@ import TableHeader from './TableHeader';
 import TableRow from './TableRow';
 import TableCell from './TableCell';
 import TableFooter from './TableFooter';
+import React from 'react';
 
 // Define metadata for the stories
 const meta: Meta = {

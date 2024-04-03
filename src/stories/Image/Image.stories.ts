@@ -20,11 +20,11 @@ type ImageGalleryStory = StoryObj<typeof ImageGallery>;
 export const Default: ImageGalleryStory = {
   args: {
     images: [
-      { src: 'url-to-your-first-image.jpg', alt: 'First image description' },
-      { src: 'url-to-your-second-image.jpg', alt: 'Second image description' },
-      // Add more images as needed
+      { src: 'urlimage.jpg', alt: 'First image description' },
+      { src: 'url.jpg', alt: 'Second image description' },
+
     ],
   },
 };
 
-// Additional stories can be defined similarly for other variants or use cases of the ImageGallery component
+

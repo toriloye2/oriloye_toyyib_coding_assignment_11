@@ -1,74 +1,9 @@
-
-// import type { Meta, StoryObj } from '@storybook/react';
-// import { Text } from './Text';
-
-// const meta: Meta = {
-//   title: 'Example/Text',
-//   component: Text,
-//   parameters: {
-//     layout: 'centered',
-//   },
-//   tags: ['autodocs'],
-//   argTypes: {
-//     backgroundColor: { control: 'color' },
-//   },
-// };
-
-// export default meta;
-
-// type Story = StoryObj<typeof meta>;
-
-// export const Normal: Story = {
-//   args: {
-//     primary: true,
-//     size: 'medium',
-//     label: 'Primary Text',
-//   },
-// };
-
-// export const Small: Story = {
-//   args: {
-//     label: 'Small Text',
-//     size: 'small',
-//   },
-// };
-
-// export const Large: Story = {
-//   args: {
-//     size: 'large',
-//     label: 'Large Text',
-//   },
-// };
-// export const Disabled: Story = {
-//   args: {
-//     label: 'Disabled Text',
-//     disabled: true,
-//     backgroundColor: 'gray',
-//   },
-// };
-
-// // export const Small: Story = {
-// //   args: {
-
-// //     label: 'Small Text',
-// //   },
-// // };
-
-
-
-// // export const Active: Story = {
-// //   args: {
-// //     label: 'Active Text',
-// //     isActive: true,
-// //     backgroundColor: 'black',
-// //   },
-// // };
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text } from './Textbox';
+import { TextBox } from './Textbox'; // Assuming TextBox is the component you want to use
 
 const meta: Meta = {
-  title: 'Example/Text',
-  component: Text,
+  title: 'Example/TextBox', // Change the title to match the component being tested
+  component: TextBox, // Change the component to TextBox
   parameters: {
     layout: 'centered',
   },
@@ -80,32 +15,30 @@ const meta: Meta = {
 
 export default meta;
 
-type TextStory = StoryObj<typeof Text>;
+type TextBoxStory = StoryObj<typeof TextBox>; // Change Text to TextBox
 
-export const Default: TextStory = {
+export const Default: TextBoxStory = {
   args: {
     content: 'Default Text',
     size: 'medium',
   },
 };
 
-export const Small: TextStory = {
+export const Small: TextBoxStory = {
   args: {
     content: 'Small Text',
     size: 'small',
   },
 };
 
-export const Large: TextStory = {
+export const Large: TextBoxStory = {
   args: {
     content: 'Large Text',
     size: 'large',
   },
 };
 
-
-
-export const Disabled: TextStory = {
+export const Disabled: TextBoxStory = {
   args: {
     content: 'Disabled Text',
     disabled: true,

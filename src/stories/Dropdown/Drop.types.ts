@@ -15,3 +15,5 @@ export type DropProps = {
   hamburgerMenu?: boolean; // New prop for the hamburger menu style
   disable?: boolean; // New prop for disabling the dropdown interaction
 };
+
+export type HamburgerIconProps = { onClick: () => void }

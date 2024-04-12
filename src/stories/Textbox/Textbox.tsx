@@ -33,7 +33,8 @@ return (
     color={color}
     style={{ fontSize }}
     onClick={handleClick}
-    {...props}
+    disabled={ props.disabled }
+    onChange={ props.onChange }
   />
 );
 };

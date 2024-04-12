@@ -1,5 +1,5 @@
 // Define the type for individual image data specific to ImageGallery component
-type ImageGalleryData = {
+export type ImageGalleryData = {
   src: string; // Source URL of the image
   alt?: string; // Optional alt text for the image
 };

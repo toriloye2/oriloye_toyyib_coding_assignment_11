@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 import styled from 'styled-components';
-import { DropProps } from './Drop.types';
+import type { DropProps, HamburgerIconProps } from './Drop.types';
 import React, { useState } from 'react';
 
 // Styled component for the dropdown container
@@ -34,13 +34,13 @@ const Option = styled.option`
 `;
 
 // Icon for closed hamburger
-const ClosedHamburgerIcon = () => (
-  <HamburgerIcon>☰</HamburgerIcon>
+const ClosedHamburgerIcon = ({onClick}: HamburgerIconProps) => (
+  <HamburgerIcon onClick={onClick}>☰</HamburgerIcon>
 );
 
 // Icon for opened hamburger
-const OpenedHamburgerIcon = () => (
-  <HamburgerIcon>✖</HamburgerIcon>
+const OpenedHamburgerIcon = ({onClick}: HamburgerIconProps) => (
+  <HamburgerIcon onClick={onClick} >✖</HamburgerIcon>
 );
 
 // Component for the dropdown

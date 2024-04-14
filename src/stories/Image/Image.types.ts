@@ -5,6 +5,6 @@ export type ImageGalleryData = {
 };
 
 // Define the props for the ImageGallery component
-type ImageGalleryProps = {
+export type ImageGalleryProps = {
   images: ImageGalleryData[]; // Array of images
 };

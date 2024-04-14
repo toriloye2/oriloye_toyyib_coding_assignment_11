@@ -35,19 +35,19 @@ export const Secondary: Story = {
   },
 };
 
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
+// export const Large: Story = {
+//   args: {
+//     size: 'large',
+//     label: 'Button',
+//   },
+// };
 
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+// export const Small: Story = {
+//   args: {
+//     size: 'small',
+//     label: 'Button',
+//   },
+// };
 
 export const Disabled = {
   args: {
@@ -57,13 +57,13 @@ export const Disabled = {
   },
 };
 
-export const Hover = {
-  args: {
-    label: 'Button on Hover',
-    isHovered: true,
-    backgroundColor: 'rgba(66, 62, 62, 1)',
-  },
-};
+// export const Hover = {
+//   args: {
+//     label: 'Button on Hover',
+//     isHovered: true,
+//     backgroundColor: 'rgba(66, 62, 62, 1)',
+//   },
+// };
 
 // export const Clicked = {
 //   args: {
@@ -73,10 +73,10 @@ export const Hover = {
 //   },
 // };
 
-export const Active = {
-  args: {
-    label: 'Active Button',
-    isActive: true,
-    backgroundColor: 'black',
-  },
-};
+// export const Active = {
+//   args: {
+//     label: 'Active Button',
+//     isActive: true,
+//     backgroundColor: 'black',
+//   },
+// };

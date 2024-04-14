@@ -33,5 +33,11 @@ export const H3: HeaderTextStory = {
     level: 'h3',
   },
 };
+export const H4: HeaderTextStory = {
+  args: {
+    text: 'Heading 4',
+    level: 'h4',
+  },
+};
 
 // Additional stories can be defined similarly for other heading levels or use cases of the HeaderText component

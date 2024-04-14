@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CardProps } from './Card.types'; // Imports the defined type
+import { ImageGalleryProps, ImageGallery } from "../Image";
 
 interface CardState {
   // Add any state properties you need here (optional)

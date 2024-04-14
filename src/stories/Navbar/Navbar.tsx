@@ -39,6 +39,9 @@ class NavBar extends Component {
           <ListItem>
             <Link href="/contact">Contact</Link>
           </ListItem>
+          <ListItem>
+            <Link href="/contact">CV</Link>
+          </ListItem>
         </List>
       </Container>
     );

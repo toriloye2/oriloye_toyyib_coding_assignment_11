@@ -58,9 +58,11 @@ const Dropdown: React.FC<DropProps> = ({ borderColor }) => {
       {isOpen ? <OpenedHamburgerIcon onClick={toggleDropdown} /> : <ClosedHamburgerIcon onClick={toggleDropdown} />}
       {isOpen && (
         <DropdownOptions borderColor={borderColor}>
-          <Option>Option 1</Option>
-          <Option>Option 2</Option>
-          <Option>Option 3</Option>
+          <Option>Home</Option>
+          <Option>About</Option>
+          <Option>Contact</Option>
+          <Option>CV</Option>
+
         </DropdownOptions>
       )}
     </DropdownContainer>

@@ -1,15 +1,8 @@
 import React from 'react';
+import type { ImageGalleryData, ImageGalleryProps } from "./Image.types";
 
-type ImageGalleryData = {
-  src: string;
-  alt?: string;
-};
 
-type ImageGalleryProps = {
-  images: ImageGalleryData[];
-};
-
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+export const ImageGallery = ({ images }: ImageGalleryProps) => {
   return (
     <div className="image-gallery">
       {images.map((image, index) => (

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Table from './Table'; // Adjust the import path based on your file structure
-import TableHeader from './TableHeader';
-import TableRow from './TableRow';
-import TableCell from './TableCell';
-import TableFooter from './TableFooter';
+import TableHeader from './TableHeader/TableHeader';
+import TableRow from './TableRow/TableRow';
+import TableCell from './TableCell/TableCell';
+import TableFooter from './TableFooter/TableFooter';
 import React from 'react';
 
 // Define metadata for the stories

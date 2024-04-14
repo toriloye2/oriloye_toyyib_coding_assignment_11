@@ -1,9 +1,4 @@
-type TableProps = {
+type TableRowProps = {
   className?: string;
   children?: React.ReactNode;
 }
-
-
-
-
-

@@ -20,7 +20,7 @@ type ImageGalleryStory = StoryObj<typeof ImageGallery>;
 export const Default: ImageGalleryStory = {
   args: {
     images: [
-      { src: 'urlimage.jpg', alt: 'First image description' },
+      { src: ',./toymage.jpg', alt: 'Toyyib Oriloye' },
       { src: 'url.jpg', alt: 'Second image description' },
 
     ],

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from './Button';
+import { Large } from '../Label/Label.stories';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -32,6 +33,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     label: 'Button',
+    size: 'large'
   },
 };
 
@@ -57,13 +59,13 @@ export const Disabled = {
   },
 };
 
-// export const Hover = {
-//   args: {
-//     label: 'Button on Hover',
-//     isHovered: true,
-//     backgroundColor: 'rgba(66, 62, 62, 1)',
-//   },
-// };
+export const Hover = {
+  args: {
+    label: 'Button on Hover',
+    isHovered: true,
+    backgroundColor: 'rgba(66, 62, 62, 1)',
+  },
+};
 
 // export const Clicked = {
 //   args: {

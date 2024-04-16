@@ -31,15 +31,10 @@
 // export default Label;
 import React from "react";
 import styled from 'styled-components';
+import { LabelProps } from "./Label.types";
 
-export type LabelProps = {
-  text: string;
-  color?: string;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
-  disabled?: boolean;
-  onClick?: () => void; // Add onClick handler prop
-}
+
+
 
 // const Label = ({
 //   text,

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TableFooterProps } from "./TableFooter.types";
 
 class TableFooter extends Component<TableFooterProps> {
   render() {

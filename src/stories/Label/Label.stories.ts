@@ -1,6 +1,7 @@
 import type { Meta,  StoryObj } from '@storybook/react';
 import  Label  from './Label';
 
+
 // Define metadata for the stories
 const meta: Meta = {
   title: 'Example/Label',

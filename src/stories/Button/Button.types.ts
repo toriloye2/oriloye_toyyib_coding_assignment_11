@@ -7,10 +7,13 @@ export type ButtonProps = {
    * What background color to use
    */
   backgroundColor?: string;
+
+  hoverBackgroundColor?: string;
   /**
    * How large should the button be?
+   * @default 'medium'
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: keyof SizeMap;
   /**
    * Button contents
    */
@@ -19,4 +22,16 @@ export type ButtonProps = {
    * Optional click handler
    */
   onClick?: () => void;
+};
+
+export type SizeMap ={
+  small: string;
+  medium: string;
+  large: string;
+}
+ export type StyledButtonProps= {
+  size?: keyof SizeMap;
+  primary?: boolean;
+  backgroundColor?: string;
+  hoverBackgroundColor?: string; // Add hoverBackgroundColor prop
 }

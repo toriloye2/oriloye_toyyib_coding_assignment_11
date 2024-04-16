@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TableProps } from './Table.types';
 
 class Table extends Component<TableProps> {
   render() {

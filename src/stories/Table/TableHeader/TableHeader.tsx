@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TableHeaderProps } from "./TableHeader.types";
 
 class TableHeader extends Component<TableHeaderProps> {
   render() {

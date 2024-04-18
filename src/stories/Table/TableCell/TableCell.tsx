@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TableCellProps } from "./TableCell.types";
 
 class TableCell extends Component<TableCellProps> {
   render() {

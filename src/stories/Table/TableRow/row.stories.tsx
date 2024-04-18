@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Table from '../Table'; // Adjust the import path based on your file structure
-import TableRow from '../TableRow/TableRow';
+import TableRow from './TableRow';
 import React from 'react';
 
 

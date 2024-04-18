@@ -30,7 +30,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { CardProps } from './Card.types'; // Imports the defined type
-import { ImageGalleryProps, ImageGallery } from "../Image";
+//import { ImageGalleryProps, ImageGallery } from "../Image";
 
 // Styled component for the card wrapper
 const CardWrapper = styled.div<{ backgroundColor?: string }>`

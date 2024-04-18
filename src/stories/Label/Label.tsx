@@ -29,7 +29,7 @@
 // };
 
 // export default Label;
-import React from "react";
+import React, { Component } from "react";
 import styled from 'styled-components';
 import { LabelProps } from "./Label.types";
 
@@ -62,7 +62,9 @@ import { LabelProps } from "./Label.types";
 //   );
 // };
 
-const Label = styled.span<LabelProps>`
+
+
+const StyledLabel = styled.span<LabelProps>`
   color: ${props => props.color || 'black'};
   background-color: ${props => props.backgroundColor || 'transparent'};
   font-size: ${props =>
@@ -78,10 +80,15 @@ const Label = styled.span<LabelProps>`
   cursor: ${props => (props.onClick ? 'pointer' : 'default')};
 `;
 
-// Usage:
- <Label text="Your Label Text" onClick={handleClick} />
+class Label extends Component<LabelProps> {
+  render() {
+    const { text, ...props } = this.props;
+    return <StyledLabel {...props}>{text}</StyledLabel>; // Pass text prop here
+  }
+}
 
 export default Label;
+
 
 function handleClick(): void {
   throw new Error("Function not implemented.");

@@ -4,5 +4,6 @@ export type TextProps = {
   size?: 'small' | 'medium' | 'large';
   color?: string;
   preferredSizes?: string[];
+  backgroundColor?: string;
 
 };

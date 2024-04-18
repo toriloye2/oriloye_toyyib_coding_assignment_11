@@ -18,7 +18,18 @@ export const Basic: CardStory = {
   args: {
     title: 'Card Title',
     description: 'This is a basic card with a title and description.',
+    backgroundColor: 'pink'
   },
 };
+
+export const Disabled: CardStory = {
+  args: {
+    title: 'Card Title',
+    description: 'This is a basic card with a title and description.',
+   // backgroundColor: 'grey',
+    disable: 'true'
+  },
+};
+
 
 

@@ -46,10 +46,21 @@ export const AfterClicked: DropStory = {
 // Story for dropdown with hamburger menu style
 export const HamburgerMenu: DropStory = {
   args: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "blue",
     fontColor: "#000000",
     borderColor: "#cccccc",
     isOpen: false, // Set isOpen to false for closed state
     hamburgerMenu: true, // Add hamburgerMenu prop
   },
+};
+
+  export const Disabled: DropStory = {
+    args: {
+      backgroundColor: "blue",
+      fontColor: "#000000",
+      borderColor: "#cccccc",
+      isOpen: false, // Set isOpen to false for closed state
+      disabled: true, // Add hamburgerMenu prop
+    },
+
 };

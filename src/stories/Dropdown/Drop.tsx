@@ -18,15 +18,19 @@ const HamburgerIcon = styled.span`
 `;
 
 // Styled component for the dropdown options
+// Styled component for the dropdown options
 const DropdownOptions = styled.select<DropProps>`
   /* Add your Dropdown options styles here */
   /* For demonstration, just basic styles */
-  background-color: white;
+  background-color: ${(props) => props.backgroundColor || 'white'}; // Use backgroundColor prop
   border: 2px solid ${(props) => props.borderColor};
   border-radius: 4px;
   padding: 8px;
   width: 150px;
+  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')}; /* Disable pointer events if disabled */
+  opacity: ${(props) => (props.disabled ? '0.5' : '1')}; /* Reduce opacity if disabled */
 `;
+
 
 // Styled component for the individual option
 const Option = styled.option`
@@ -44,7 +48,7 @@ const OpenedHamburgerIcon = ({onClick}: HamburgerIconProps) => (
 );
 
 // Component for the dropdown
-const Dropdown: React.FC<DropProps> = ({ borderColor }) => {
+const Dropdown: React.FC<DropProps> = ({ borderColor, backgroundColor, disabled }) => {
   const [isOpen, setIsOpen] = useState(false); // State to track dropdown open/close
 
   // Function to toggle dropdown state
@@ -57,7 +61,7 @@ const Dropdown: React.FC<DropProps> = ({ borderColor }) => {
       {/* Conditional rendering based on dropdown state */}
       {isOpen ? <OpenedHamburgerIcon onClick={toggleDropdown} /> : <ClosedHamburgerIcon onClick={toggleDropdown} />}
       {isOpen && (
-        <DropdownOptions borderColor={borderColor}>
+        <DropdownOptions borderColor={borderColor} backgroundColor={backgroundColor}> {/* Pass backgroundColor prop */}
           <Option>Home</Option>
           <Option>About</Option>
           <Option>Contact</Option>

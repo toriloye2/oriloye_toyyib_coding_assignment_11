@@ -53,15 +53,17 @@ import styled from 'styled-components';
 import type { TextProps } from "./Text.types";
 
 
-const StyledText = styled.p<{ color: string }>` // Adjust the styled component definition
+const StyledText = styled.p<{ color: string,  backgroundColor?: string; }>` // Adjust the styled component definition
   color: ${(props) => props.color || 'black'};
   font-size: var(--font-size, 16px);
   cursor: pointer;
+  background-color: ${(props) => props.backgroundColor || 'blue'}
 `;
 
 export const Text = ({
   preferredSizes = ['small', 'medium', 'large'],
   color = 'black',
+  backgroundColor = 'blue',
   content,
   ...props
 }: TextProps) => {
@@ -76,6 +78,7 @@ export const Text = ({
   return (
     <StyledText
       color={color}
+      backgroundColor={backgroundColor}
       style={{ fontSize: size === 'small' ? '12px' : size === 'large' ? '20px' : '16px' }}
       onClick={handleClick}
       {...props}

@@ -93,6 +93,7 @@ export const Small: TextStory = {
   args: {
     content: 'Small Text',
     size: 'small',
+    backgroundColor:'red'
   },
 };
 

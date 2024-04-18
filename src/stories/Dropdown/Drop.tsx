@@ -53,7 +53,9 @@ const Dropdown: React.FC<DropProps> = ({ borderColor, backgroundColor, disabled 
 
   // Function to toggle dropdown state
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    if (!disabled) {
+      setIsOpen(!isOpen);
+    }
   };
 
   return (

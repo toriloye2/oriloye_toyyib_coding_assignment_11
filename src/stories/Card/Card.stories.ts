@@ -27,7 +27,7 @@ export const Disabled: CardStory = {
     title: 'Card Title',
     description: 'This is a basic card with a title and description.',
    // backgroundColor: 'grey',
-    disable: 'true'
+    disable: true,
   },
 };
 
